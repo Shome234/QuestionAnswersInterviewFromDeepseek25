@@ -1,0 +1,450 @@
+# 100 SQL Interview Questions and Answers for Experienced Developers
+
+Here’s a comprehensive list of **100 SQL interview questions and answers** for experienced developers. These questions cover a wide range of topics, including basic SQL concepts, advanced queries, optimization, and database design.
+
+---
+
+## 1. Basic SQL Concepts
+
+1. **What is SQL?**
+   - **Answer**: SQL (Structured Query Language) is a standard language for managing and manipulating relational databases.
+
+2. **What are the different types of SQL commands?**
+   - **Answer**:
+     - **DDL**: Data Definition Language (e.g., CREATE, ALTER, DROP).
+     - **DML**: Data Manipulation Language (e.g., SELECT, INSERT, UPDATE, DELETE).
+     - **DCL**: Data Control Language (e.g., GRANT, REVOKE).
+     - **TCL**: Transaction Control Language (e.g., COMMIT, ROLLBACK).
+
+3. **What is a database?**
+   - **Answer**: A database is an organized collection of data stored and accessed electronically.
+
+4. **What is a table in SQL?**
+   - **Answer**: A table is a collection of related data organized in rows and columns.
+
+5. **What is a primary key?**
+   - **Answer**: A primary key is a unique identifier for each record in a table. It cannot contain NULL values.
+
+6. **What is a foreign key?**
+   - **Answer**: A foreign key is a column or set of columns that references the primary key of another table, establishing a relationship between the two tables.
+
+7. **What is a unique key?**
+   - **Answer**: A unique key ensures that all values in a column are unique. Unlike a primary key, it can contain NULL values.
+
+8. **What is the difference between DELETE and TRUNCATE?**
+   - **Answer**:
+     - **DELETE**: Removes rows one by one and can be rolled back.
+     - **TRUNCATE**: Removes all rows at once and cannot be rolled back.
+
+9. **What is the difference between DROP and TRUNCATE?**
+   - **Answer**:
+     - **DROP**: Deletes the entire table structure and data.
+     - **TRUNCATE**: Deletes only the data, keeping the table structure intact.
+
+10. **What is a view in SQL?**
+    - **Answer**: A view is a virtual table created by a query. It does not store data but displays data from one or more tables.
+
+---
+
+## 2. SQL Queries
+
+11. **How do you retrieve all columns from a table?**
+    - **Answer**: Use `SELECT * FROM table_name;`.
+
+12. **How do you retrieve specific columns from a table?**
+    - **Answer**: Use `SELECT column1, column2 FROM table_name;`.
+
+13. **What is the WHERE clause used for?**
+    - **Answer**: It filters records based on a condition.
+
+14. **What is the ORDER BY clause used for?**
+    - **Answer**: It sorts the result set in ascending or descending order.
+
+15. **What is the GROUP BY clause used for?**
+    - **Answer**: It groups rows with the same values into summary rows.
+
+16. **What is the HAVING clause used for?**
+    - **Answer**: It filters groups based on a condition (used with GROUP BY).
+
+17. **What is the difference between WHERE and HAVING?**
+    - **Answer**:
+      - **WHERE**: Filters rows before grouping.
+      - **HAVING**: Filters groups after grouping.
+
+18. **What is the JOIN clause used for?**
+    - **Answer**: It combines rows from two or more tables based on a related column.
+
+19. **What are the types of joins in SQL?**
+    - **Answer**:
+      - **INNER JOIN**: Returns matching rows.
+      - **LEFT JOIN**: Returns all rows from the left table and matching rows from the right table.
+      - **RIGHT JOIN**: Returns all rows from the right table and matching rows from the left table.
+      - **FULL JOIN**: Returns all rows when there is a match in either table.
+
+20. **What is a self-join?**
+    - **Answer**: A self-join is a join of a table to itself.
+
+---
+
+## 3. Advanced SQL Queries
+
+21. **What is a subquery?**
+    - **Answer**: A subquery is a query nested inside another query.
+
+22. **What is a correlated subquery?**
+    - **Answer**: A subquery that depends on the outer query for its values.
+
+23. **What is the difference between IN and EXISTS?**
+    - **Answer**:
+      - **IN**: Checks if a value exists in a list.
+      - **EXISTS**: Checks if a subquery returns any rows.
+
+24. **What is the difference between UNION and UNION ALL?**
+    - **Answer**:
+      - **UNION**: Combines results and removes duplicates.
+      - **UNION ALL**: Combines results without removing duplicates.
+
+25. **What is a CTE (Common Table Expression)?**
+    - **Answer**: A CTE is a temporary result set that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement.
+
+26. **What is the difference between ROW_NUMBER(), RANK(), and DENSE_RANK()?**
+    - **Answer**:
+      - **ROW_NUMBER()**: Assigns a unique number to each row.
+      - **RANK()**: Assigns the same rank to rows with the same value, leaving gaps.
+      - **DENSE_RANK()**: Assigns the same rank to rows with the same value, without gaps.
+
+27. **What is a window function?**
+    - **Answer**: A window function performs calculations across a set of table rows related to the current row.
+
+28. **What is the difference between CROSS JOIN and INNER JOIN?**
+    - **Answer**:
+      - **CROSS JOIN**: Returns the Cartesian product of two tables.
+      - **INNER JOIN**: Returns only matching rows.
+
+29. **What is the difference between IS NULL and IS NOT NULL?**
+    - **Answer**:
+      - **IS NULL**: Checks for NULL values.
+      - **IS NOT NULL**: Checks for non-NULL values.
+
+30. **What is the difference between BETWEEN and IN?**
+    - **Answer**:
+      - **BETWEEN**: Checks if a value is within a range.
+      - **IN**: Checks if a value is in a list.
+
+---
+
+## 4. SQL Functions
+
+31. **What are aggregate functions in SQL?**
+    - **Answer**: Functions that perform calculations on a set of values (e.g., SUM, AVG, COUNT, MIN, MAX).
+
+32. **What is the difference between COUNT(*) and COUNT(column_name)?**
+    - **Answer**:
+      - **COUNT(*)**: Counts all rows, including NULL values.
+      - **COUNT(column_name)**: Counts non-NULL values in the column.
+
+33. **What is the GROUP_CONCAT function used for?**
+    - **Answer**: It concatenates values from multiple rows into a single string.
+
+34. **What is the COALESCE function used for?**
+    - **Answer**: It returns the first non-NULL value in a list.
+
+35. **What is the NULLIF function used for?**
+    - **Answer**: It returns NULL if two expressions are equal; otherwise, it returns the first expression.
+
+36. **What is the CASE statement used for?**
+    - **Answer**: It performs conditional logic in SQL queries.
+
+37. **What is the CAST function used for?**
+    - **Answer**: It converts a value from one data type to another.
+
+38. **What is the CONVERT function used for?**
+    - **Answer**: It converts a value from one data type to another (similar to CAST but with additional formatting options).
+
+39. **What is the DATEADD function used for?**
+    - **Answer**: It adds a specified time interval to a date.
+
+40. **What is the DATEDIFF function used for?**
+    - **Answer**: It calculates the difference between two dates.
+
+---
+
+## 5. Database Design
+
+41. **What is normalization?**
+    - **Answer**: Normalization is the process of organizing data to reduce redundancy and improve data integrity.
+
+42. **What are the normal forms in database design?**
+    - **Answer**:
+      - **1NF**: Eliminate duplicate columns.
+      - **2NF**: Remove partial dependencies.
+      - **3NF**: Remove transitive dependencies.
+      - **BCNF**: Boyce-Codd Normal Form.
+      - **4NF**: Remove multi-valued dependencies.
+      - **5NF**: Remove join dependencies.
+
+43. **What is denormalization?**
+    - **Answer**: Denormalization is the process of combining tables to improve read performance at the cost of write performance.
+
+44. **What is an index?**
+    - **Answer**: An index is a data structure that improves the speed of data retrieval operations.
+
+45. **What are the types of indexes?**
+    - **Answer**:
+      - **Clustered Index**: Determines the physical order of data.
+      - **Non-Clustered Index**: Stores a separate structure with pointers to the data.
+
+46. **What is a composite key?**
+    - **Answer**: A composite key is a combination of two or more columns that uniquely identify a row.
+
+47. **What is a surrogate key?**
+    - **Answer**: A surrogate key is an artificial key (e.g., auto-incremented ID) used to uniquely identify a row.
+
+48. **What is a candidate key?**
+    - **Answer**: A candidate key is a column or set of columns that can uniquely identify a row.
+
+49. **What is a transaction?**
+    - **Answer**: A transaction is a sequence of operations performed as a single logical unit of work.
+
+50. **What are ACID properties?**
+    - **Answer**:
+      - **Atomicity**: All operations succeed or fail together.
+      - **Consistency**: Data remains consistent before and after the transaction.
+      - **Isolation**: Transactions are isolated from each other.
+      - **Durability**: Changes are permanent once committed.
+
+---
+
+## 6. Performance Optimization
+
+51. **How do you optimize a SQL query?**
+    - **Answer**: Use indexes, avoid SELECT *, limit the use of subqueries, and optimize joins.
+
+52. **What is query execution plan?**
+    - **Answer**: It is a step-by-step plan generated by the database engine to execute a query.
+
+53. **What is the difference between EXPLAIN and EXPLAIN ANALYZE?**
+    - **Answer**:
+      - **EXPLAIN**: Shows the execution plan.
+      - **EXPLAIN ANALYZE**: Shows the execution plan and actual performance statistics.
+
+54. **What is indexing selectivity?**
+    - **Answer**: It measures how unique the values in an index are. High selectivity means fewer duplicate values.
+
+55. **What is a covering index?**
+    - **Answer**: An index that includes all the columns needed by a query, eliminating the need to access the table.
+
+56. **What is a deadlock?**
+    - **Answer**: A deadlock occurs when two or more transactions block each other by holding locks on resources.
+
+57. **What is a lock?**
+    - **Answer**: A lock is a mechanism to prevent multiple transactions from accessing the same resource simultaneously.
+
+58. **What is the difference between READ COMMITTED and REPEATABLE READ?**
+    - **Answer**:
+      - **READ COMMITTED**: Allows only committed data to be read.
+      - **REPEATABLE READ**: Ensures that if a transaction reads the same data twice, it gets the same result.
+
+59. **What is the difference between READ UNCOMMITTED and READ COMMITTED?**
+    - **Answer**:
+      - **READ UNCOMMITTED**: Allows reading uncommitted data (dirty reads).
+      - **READ COMMITTED**: Allows only committed data to be read.
+
+60. **What is the difference between SERIALIZABLE and REPEATABLE READ?**
+    - **Answer**:
+      - **SERIALIZABLE**: Ensures complete isolation by locking the entire table.
+      - **REPEATABLE READ**: Ensures that reads are consistent but allows phantom reads.
+
+---
+
+## 7. Stored Procedures and Functions
+
+61. **What is a stored procedure?**
+    - **Answer**: A stored procedure is a precompiled collection of SQL statements stored in the database.
+
+62. **What is a function in SQL?**
+    - **Answer**: A function is a reusable block of code that returns a single value.
+
+63. **What is the difference between a stored procedure and a function?**
+    - **Answer**:
+      - **Stored Procedure**: Can return multiple values and perform DML operations.
+      - **Function**: Must return a single value and cannot perform DML operations.
+
+64. **What is a trigger?**
+    - **Answer**: A trigger is a special type of stored procedure that automatically executes when a specific event occurs (e.g., INSERT, UPDATE, DELETE).
+
+65. **What is the difference between BEFORE and AFTER triggers?**
+    - **Answer**:
+      - **BEFORE**: Executes before the event.
+      - **AFTER**: Executes after the event.
+
+66. **What is a cursor?**
+    - **Answer**: A cursor is a database object used to retrieve and manipulate rows one at a time.
+
+67. **What is the difference between implicit and explicit cursors?**
+    - **Answer**:
+      - **Implicit Cursor**: Automatically created by the database.
+      - **Explicit Cursor**: Created and managed by the user.
+
+68. **What is dynamic SQL?**
+    - **Answer**: Dynamic SQL is SQL code generated and executed at runtime.
+
+69. **What is the difference between EXEC and EXECUTE?**
+    - **Answer**: Both are used to execute stored procedures, but EXEC is a shorthand for EXECUTE.
+
+70. **What is the difference between IN and OUT parameters in stored procedures?**
+    - **Answer**:
+      - **IN**: Passes values to the procedure.
+      - **OUT**: Returns values from the procedure.
+
+---
+
+## 8. Advanced Topics
+
+71. **What is a materialized view?**
+    - **Answer**: A materialized view stores the result of a query physically and can be refreshed periodically.
+
+72. **What is partitioning in SQL?**
+    - **Answer**: Partitioning divides a large table into smaller, more manageable pieces.
+
+73. **What is replication in SQL?**
+    - **Answer**: Replication is the process of copying and synchronizing data between databases.
+
+74. **What is sharding?**
+    - **Answer**: Sharding is the process of splitting a database into smaller, independent pieces called shards.
+
+75. **What is a database cluster?**
+    - **Answer**: A database cluster is a group of databases managed by a single server.
+
+76. **What is the difference between horizontal and vertical scaling?**
+    - **Answer**:
+      - **Horizontal Scaling**: Adding more servers.
+      - **Vertical Scaling**: Adding more resources (e.g., CPU, RAM) to a single server.
+
+77. **What is a database schema?**
+    - **Answer**: A database schema defines the structure of the database, including tables, columns, and relationships.
+
+78. **What is the difference between a database and a schema?**
+    - **Answer**:
+      - **Database**: A collection of data.
+      - **Schema**: A logical container for database objects (e.g., tables, views).
+
+79. **What is the difference between CHAR and VARCHAR?**
+    - **Answer**:
+      - **CHAR**: Fixed-length string.
+      - **VARCHAR**: Variable-length string.
+
+80. **What is the difference between DATETIME and TIMESTAMP?**
+    - **Answer**:
+      - **DATETIME**: Stores date and time without timezone.
+      - **TIMESTAMP**: Stores date and time with timezone.
+
+---
+
+## 9. SQL in Practice
+
+81. **How do you handle duplicate records in SQL?**
+    - **Answer**: Use DISTINCT, GROUP BY, or ROW_NUMBER() to remove duplicates.
+
+82. **How do you find the second highest salary in a table?**
+    - **Answer**:
+      ```sql
+      SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees);
+      ```
+
+83. **How do you find the nth highest salary in a table?**
+    - **Answer**:
+      ```sql
+      SELECT salary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET n-1;
+      ```
+
+84. **How do you delete duplicate rows in SQL?**
+    - **Answer**:
+      ```sql
+      DELETE FROM employees WHERE id NOT IN (SELECT MIN(id) FROM employees GROUP BY column_name);
+      ```
+
+85. **How do you find the top 5 records in SQL?**
+    - **Answer**:
+      ```sql
+      SELECT * FROM employees ORDER BY salary DESC LIMIT 5;
+      ```
+
+86. **How do you calculate the cumulative sum in SQL?**
+    - **Answer**: Use window functions like `SUM() OVER()`.
+
+87. **How do you find the difference between two dates in SQL?**
+    - **Answer**: Use `DATEDIFF()`.
+
+88. **How do you concatenate strings in SQL?**
+    - **Answer**: Use `CONCAT()` or `||`.
+
+89. **How do you update a column based on another column's value?**
+    - **Answer**:
+      ```sql
+      UPDATE employees SET salary = salary * 1.1 WHERE department = 'IT';
+      ```
+
+90. **How do you find the number of employees in each department?**
+    - **Answer**:
+      ```sql
+      SELECT department, COUNT(*) FROM employees GROUP BY department;
+      ```
+
+---
+
+## 10. Miscellaneous
+
+91. **What is the difference between UNION and JOIN?**
+    - **Answer**:
+      - **UNION**: Combines rows from two queries.
+      - **JOIN**: Combines columns from two tables.
+
+92. **What is the difference between INNER JOIN and OUTER JOIN?**
+    - **Answer**:
+      - **INNER JOIN**: Returns only matching rows.
+      - **OUTER JOIN**: Returns all rows, including non-matching ones.
+
+93. **What is the difference between LEFT JOIN and RIGHT JOIN?**
+    - **Answer**:
+      - **LEFT JOIN**: Returns all rows from the left table.
+      - **RIGHT JOIN**: Returns all rows from the right table.
+
+94. **What is the difference between CROSS JOIN and FULL JOIN?**
+    - **Answer**:
+      - **CROSS JOIN**: Returns the Cartesian product.
+      - **FULL JOIN**: Returns all rows from both tables.
+
+95. **What is the difference between IS NULL and = NULL?**
+    - **Answer**:
+      - **IS NULL**: Checks for NULL values.
+      - **= NULL**: Always returns NULL (invalid syntax).
+
+96. **What is the difference between BETWEEN and IN?**
+    - **Answer**:
+      - **BETWEEN**: Checks if a value is within a range.
+      - **IN**: Checks if a value is in a list.
+
+97. **What is the difference between LIKE and IN?**
+    - **Answer**:
+      - **LIKE**: Matches patterns in strings.
+      - **IN**: Matches values in a list.
+
+98. **What is the difference between CHAR and NCHAR?**
+    - **Answer**:
+      - **CHAR**: Stores non-Unicode characters.
+      - **NCHAR**: Stores Unicode characters.
+
+99. **What is the difference between VARCHAR and NVARCHAR?**
+    - **Answer**:
+      - **VARCHAR**: Stores non-Unicode characters.
+      - **NVARCHAR**: Stores Unicode characters.
+
+100. **What is the difference between DELETE and DROP?**
+     - **Answer**:
+       - **DELETE**: Removes rows from a table.
+       - **DROP**: Deletes the entire table.
+
+---
+
+These questions and answers should help you prepare for SQL interviews at an experienced level. Let me know if you need further clarification!
